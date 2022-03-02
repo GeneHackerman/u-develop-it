@@ -35,6 +35,7 @@ router.get('/voter/:id', (req, res) => {
     });
 });
 
+// post voter
 router.post('/voter', ({ body }, res) => {
     // data validation
     const errors = inputCheck(body, 'first_name', 'last_name', 'email');
@@ -57,6 +58,7 @@ router.post('/voter', ({ body }, res) => {
     });
 });
 
+// PUT updates
 router.put('/voter/:id', (req, res) => {
     // data validation
     const errors = inputCheck(req.body, 'email');
